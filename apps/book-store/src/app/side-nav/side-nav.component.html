@@ -1,0 +1,29 @@
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-icon-button>
+        <mat-icon (click)="sidenav.toggle()">list</mat-icon>
+      </button>
+      <h1>EnLight</h1>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side" opened>
+      <mat-nav-list>
+        <a mat-list-item [routerLink]="'/dashboard'"> 
+            <mat-icon class='mat-icon'>dashboard</mat-icon>Dashboard 
+        </a>
+        <a mat-list-item [routerLink]="'/cart'"> 
+            <mat-icon [matBadge]="cartItemsCount" matBadgePosition="before" matBadgeColor="accent" class='mat-icon'>shopping_cart</mat-icon> Cart 
+        </a>
+        <a mat-list-item [routerLink]="'/collection'"> 
+            <mat-icon [matBadge]="purchasedItemsCount" matBadgePosition="before" matBadgeColor="accent"  class='mat-icon'>collections</mat-icon> My Collection 
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="main-container">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

@@ -1,0 +1,44 @@
+.cards {
+    width:100%;
+    text-align: left;
+}
+.mat-card {
+    width: 250px !important;
+    padding:30px;
+    display: inline-block;
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin:30px;
+    height: 380px  !important;
+    text-align: center !important;
+    vertical-align: top;
+}
+
+.mat-card-image{
+    width:220px;
+    height:220px;
+}
+
+.truncate {
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+
+.dashboard-container {
+    width:100%;
+    text-align:center;
+}
+
+.mat-button {
+    width: 100px;
+    border: 1px solid black;
+    margin-right:10px;
+}
+
+.mat-card-footer {
+    margin: 0px !important;   
+}

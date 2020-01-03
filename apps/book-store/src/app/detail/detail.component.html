@@ -1,0 +1,23 @@
+<div class="detail-container">
+    <mat-card class="mat-card" *ngIf="selectedBook">
+        <mat-card-header class="header">
+          <mat-card-title>{{selectedBook.volumeInfo?.title}}</mat-card-title>
+          <mat-card-subtitle>{{selectedBook.volumeInfo?.subtitle}}
+          </mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{selectedBook.volumeInfo?.imageLinks?.smallThumbnail}}" alt="{{selectedBook?.volumeInfo?.subtitle}}">
+        <mat-card-content>
+            <p>
+                {{selectedBook.volumeInfo?.description}}
+            </p>
+            <h4>Authors</h4>
+            <span>{{selectedBook.volumeInfo?.authors?.toString()}}</span>
+            <h4>Publisher</h4>
+            <span>{{selectedBook.volumeInfo?.publisher}}</span>
+        </mat-card-content>
+        <mat-card-footer>
+            <button mat-button color="primary" (click)="addToCart(selectedBook.id)">Add to cart</button>
+            <button mat-button color="primary" (click)="buyNow(selectedBook.id)">Buy now</button>
+        </mat-card-footer>
+      </mat-card>
+</div>

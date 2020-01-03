@@ -1,0 +1,32 @@
+.detail-container {
+    width:90%;
+    text-align: center;
+}
+
+.mat-card {
+    width: 100%;
+    padding:30px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin:30px;
+    text-align: center;
+}
+
+.mat-card-image{
+    width:350px;
+    height:220px;
+}
+
+.mat-button {
+    width: 100px;
+    border: 1px solid black;
+    margin-right:10px;
+}
+
+.mat-card-footer {
+    margin: 0px !important;   
+}
+
+.header {
+    display: inline !important;
+}

@@ -1,0 +1,21 @@
+<div class="dashboard-container">
+    <div class="cards">
+        <mat-card *ngFor="let book of cartList" class="mat-card">
+            <mat-card-header>
+                <mat-card-title class="truncate">{{book?.volumeInfo?.title}}</mat-card-title>
+                <mat-card-subtitle class="truncate">{{book?.volumeInfo?.subtitle}}
+                </mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="{{book.volumeInfo?.imageLinks?.smallThumbnail}}"
+                alt="{{book?.volumeInfo?.subtitle}}">
+            <mat-card-content>
+                <span>{{book.volumeInfo?.authors?.toString()}}</span>
+            </mat-card-content>
+
+            <mat-card-footer>
+                <button mat-button color="primary" (click)="addToCart(book)">Remove</button>
+                <button mat-button color="primary" (click)="buyNow(book.id)">Buy now</button>
+            </mat-card-footer>
+        </mat-card>
+    </div>
+</div>
